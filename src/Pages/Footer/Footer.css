@@ -1,0 +1,14 @@
+.footer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    gap: 50px;
+}
+
+.footer-items {
+    margin-top: 10px;
+}

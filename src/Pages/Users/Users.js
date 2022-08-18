@@ -2,7 +2,7 @@ import React from "react";
 
 const Users = () => {
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       <p>users</p>
     </div>
   );

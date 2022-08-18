@@ -2,7 +2,7 @@ import React from "react";
 
 const Orders = () => {
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       <p>orders</p>
     </div>
   );
