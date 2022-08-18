@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Product from "./Product";
+import "./Products.css";
 
 const Products = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("https://assessment.api.vweb.app/products")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
   return (
-    <div style={{ height: "100vh" }}>
-      <p>products</p>
+    <div className="products-container">
+      {products.map((product) => (
+        <Product key={product.product_id} product={product}></Product>
+      ))}
     </div>
   );
 };

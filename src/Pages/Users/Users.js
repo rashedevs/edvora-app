@@ -15,7 +15,7 @@ const Users = () => {
         <thead>
           <tr>
             <th>User ID</th>
-            <th>Name</th>
+            <th>User Name</th>
           </tr>
         </thead>
         <tbody>

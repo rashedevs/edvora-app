@@ -1,0 +1,8 @@
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0px 5px 35px
+}
