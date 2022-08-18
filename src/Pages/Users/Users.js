@@ -8,10 +8,10 @@ const Users = () => {
     fetch("https://assessment.api.vweb.app/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
-  }, []);
+  }, [users]);
   return (
-    <div>
-      <Table striped bordered hover>
+    <div className="p-4">
+      <Table bordered hover>
         <thead>
           <tr>
             <th>User ID</th>

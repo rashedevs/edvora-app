@@ -8,7 +8,7 @@ const Products = () => {
     fetch("https://assessment.api.vweb.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
-  }, []);
+  }, [products]);
   return (
     <div className="products-container">
       {products.map((product) => (
