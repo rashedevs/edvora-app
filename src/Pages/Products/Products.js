@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from "react";
+import useData from "../Hooks/useData";
 import Product from "./Product";
 import "./Products.css";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("https://assessment.api.vweb.app/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, [products]);
+  const [products] = useData("https://assessment.api.vweb.app/products");
   return (
     <div className="products-container">
       {products.map((product) => (

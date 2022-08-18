@@ -1,24 +1,33 @@
-import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
+import useData from "../Hooks/useData";
 import Order from "./Order";
 
 const Orders = () => {
-  const [orders, setOrders] = useState([]);
-  useEffect(() => {
-    fetch("https://assessment.api.vweb.app/orders")
-      .then((res) => res.json())
-      .then((data) => setOrders(data));
-  }, [orders]);
+  const [orders] = useData("https://assessment.api.vweb.app/orders");
   return (
     <div className="p-4">
       <Table bordered hover>
         <thead>
           <tr>
-            <th>Order ID</th>
-            <th>Product ID</th>
-            <th>Quantity</th>
-            <th>User ID</th>
-            <th>Order Date</th>
+            <th>
+              Order ID <br /> <p></p>
+            </th>
+            <th>
+              Product ID <br />
+              <p></p>
+            </th>
+            <th>
+              Quantity <br />
+              <p></p>
+            </th>
+            <th>
+              User ID <br />
+              <p></p>
+            </th>
+            <th>
+              Order Date <br />
+              <p>(MM/DD/YYYY)</p>
+            </th>
           </tr>
         </thead>
         <tbody>

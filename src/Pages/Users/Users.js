@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
+import useData from "../Hooks/useData";
 import User from "./User";
 
 const Users = () => {
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    fetch("https://assessment.api.vweb.app/users")
-      .then((res) => res.json())
-      .then((data) => setUsers(data));
-  }, [users]);
+  const [users] = useData("https://assessment.api.vweb.app/users");
   return (
     <div className="p-4">
       <Table bordered hover>
