@@ -22,7 +22,7 @@ const Linechart = () => {
         <Line dataKey="selling_price" stroke="#8884d8"></Line>
         <Line dataKey="stock" stroke="#82ca9d"></Line>
         <Line dataKey="product_id" stroke="#16E2F5"></Line>
-        <XAxis dataKey=""></XAxis>
+        <XAxis dataKey="stock"></XAxis>
         <YAxis dataKey=""></YAxis>
         <Legend />
         <Tooltip></Tooltip>
